@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship Application Form</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Custom CSS for form styling -->
     <style>
         .form-container {
             max-width: 600px;
@@ -27,7 +25,7 @@
     <form id="internship-form">
         <!-- First Name -->
         <div class="form-group">
-            <label for="first-name-input">First Name</label>
+            <label class="form-label" for="first-name-input">First Name</label>
             <input type="text" class="form-control" id="first-name-input" placeholder="Enter your first name" required>
             <div class="invalid-feedback">
                 Please enter your first name.
@@ -36,7 +34,7 @@
         
         <!-- Last Name -->
         <div class="form-group">
-            <label for="last-name-input">Last Name</label>
+            <label class="form-label" for="last-name-input">Last Name</label>
             <input type="text" class="form-control" id="last-name-input" placeholder="Enter your last name" required>
             <div class="invalid-feedback">
                 Please enter your last name.
@@ -45,7 +43,7 @@
         
         <!-- Email -->
         <div class="form-group">
-            <label for="email-input">Email address</label>
+            <label class="form-label" for="email-input">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Enter your email" required>
             <div class="invalid-feedback">
                 Please enter a valid email address.
@@ -54,7 +52,7 @@
         
         <!-- College Name -->
         <div class="form-group">
-            <label for="college-input">College Name</label>
+            <label class="form-label" for="college-input">College Name</label>
             <input type="text" class="form-control" id="college-input" placeholder="Enter your college name" required>
             <div class="invalid-feedback">
                 Please enter your college name.
@@ -63,7 +61,7 @@
         
         <!-- Roll No -->
         <div class="form-group">
-            <label for="roll-no-input">Roll No</label>
+            <label class="form-label" for="roll-no-input">Roll No</label>
             <input type="text" class="form-control" id="roll-no-input" placeholder="Enter your roll number" required>
             <div class="invalid-feedback">
                 Please enter your roll number.
@@ -72,7 +70,7 @@
         
         <!-- Graduation Year -->
         <div class="form-group">
-            <label for="graduation-year-select">Graduation Year</label>
+            <label class="form-label" for="graduation-year-select">Graduation Year</label>
             <select class="form-control" id="graduation-year-select" required>
                 <option value="" disabled selected>Select your graduation year</option>
                 <option value="2020">2020</option>
@@ -101,19 +99,14 @@
     </form>
 </div>
 
-<!-- Bootstrap JS and dependencies -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<!-- Custom JS for form validation -->
 <script>
-    // JavaScript for form validation
     (function() {
         'use strict';
         window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
             var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
             var validation = Array.prototype.filter.call(forms, function(form) {
                 form.addEventListener('submit', function(event) {
                     if (form.checkValidity() === false) {
